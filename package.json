@@ -1,0 +1,26 @@
+{
+  "name": "monorepo-mfp",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "packages/container",
+    "packages/auth",
+    "packages/dashboard",
+    "packages/marketing"
+  ],
+  "scripts": {
+    "start": "concurrently -n \"container,marketing,auth,dashboard\" -c \"cyan.bold,green.bold,yellow.bold,magenta.bold\" \"npm run start:container\" \"npm run start:marketing\" \"npm run start:auth\" \"npm run start:dashboard\"",
+    "dev": "npm start",
+    "start:container": "npm run start -w packages/container",
+    "start:auth": "npm run start -w packages/auth",
+    "start:dashboard": "npm run start -w packages/dashboard",
+    "start:marketing": "npm run start -w packages/marketing",
+    "test:all": "npm run test --workspaces --if-present"
+  },
+  "keywords": [],
+  "author": "Barrie Freyre",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
