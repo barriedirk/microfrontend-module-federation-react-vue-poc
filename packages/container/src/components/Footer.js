@@ -55,20 +55,20 @@ export default function Footer() {
           <Typography
             variant="subtitle2"
             color="textPrimary"
+            align="center"
             style={{ fontWeight: 600 }}
           >
             Microfrontend Architecture Demo
           </Typography>
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2" align="center" color="textSecondary">
             Built with Webpack 5 Module Federation, React & Vue 3
           </Typography>
-          <Typography variant="caption" color="textSecondary">
-            © {new Date().getFullYear()} Barrie Freyre. Open Source Proof of
-            Concept.
+          <Typography variant="caption" align="center" color="textSecondary">
+            © {new Date().getFullYear()} Source Proof of Concept.
           </Typography>
         </div>
 
-        <Box>
+        <Box align="center">
           <Button
             variant="outlined"
             color="primary"
